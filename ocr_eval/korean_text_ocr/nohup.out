@@ -1,0 +1,34 @@
+OCR Inference:   0%|          | 0/4000 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+질문: 이 바운딩 박스 영역에 있는 문자를 읽어주세요: [0.52, 0.43, 0.65, 0.47].
+답변: 이 바운딩 박스의 높이에 있는 문자는 "이"를表示합니다.
+Traceback (most recent call last):
+  File "/home/aikusrv04/aiku/small_korean_vlm/ocr_eval/korean_text_ocr/text_inference_onevision.py", line 80, in <module>
+    output = model.generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/transformers/generation/utils.py", line 2252, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/transformers/generation/utils.py", line 3251, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/transformers/models/llava_onevision/modeling_llava_onevision.py", line 675, in forward
+    image_features, feature_lens = self.pack_image_features(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/transformers/models/llava_onevision/modeling_llava_onevision.py", line 431, in pack_image_features
+    num_patch_height, num_patch_width = get_anyres_image_grid_shape(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aikusrv04/anaconda3/lib/python3.11/site-packages/transformers/models/llava_onevision/modeling_llava_onevision.py", line 70, in get_anyres_image_grid_shape
+    image_size = image_size.tolist()
+                 ^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+OCR Inference:   0%|          | 0/4000 [00:07<?, ?it/s]

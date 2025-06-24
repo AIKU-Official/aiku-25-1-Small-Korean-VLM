@@ -1,0 +1,63 @@
+# 체크포인트 제외. 단 각 하위 디렉토리 내의 'README.md' 파일은 예외적으로 포함(추적)합니다.
+checkpoints/**/*
+!checkpoints/llava-hyperclovax-korean-ocr-culture-augmented-aikusrv04/README.md
+!checkpoints/llava-hyperclovax-korean-ocr-culture-augmented-korean-only/README.md
+!checkpoints/llava-hyperclovax-korean-ocr-culture-augmented-pooling-connection/README.md
+!checkpoints/lora_merged/README.md
+!checkpoints/projectors/README.md
+!checkpoints/svlm_baseline/README.dm
+!checkpoints/svlm_data_augmented/README.md
+
+# 모든 json 데이터 제외
+*.json
+*.jsonl
+
+data/
+outputs/
+# 캐시, 임시파일, 파이썬 컴파일 파일 등
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.tmp
+*.log
+*.tar.gz
+*.tar
+*.zip
+*.bak
+*.old
+*.DS_Store
+
+# Jupyter notebook 체크포인트
+.ipynb_checkpoints/
+
+# 환경설정 파일
+.env
+*.env
+
+# 기타 대용량/불필요 파일
+*.safetensors
+*.pt
+*.ckpt
+*.h5
+*.onnx
+
+# OS별 불필요 파일
+Thumbs.db
+.DS_Store
+
+# vscode 설정
+.vscode/
+.conda/
+
+
+hyunwook/
+
+LLaVA/cuda_12.1.0_530.30.02_linux.run
+LLaVA/playground/
+LLaVA/docs/
+LLaVA/llava.egg-info/
+LLaVA/wandb/
+LLaVA-NeXT/
